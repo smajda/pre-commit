@@ -4,6 +4,7 @@ require 'pre-commit/checks/merge_conflict'
 require 'pre-commit/checks/tabs'
 require 'pre-commit/checks/console_log'
 require 'pre-commit/checks/debugger_check'
+require 'pre-commit/checks/ipdb'
 require 'pre-commit/checks/jslint_check'
 require 'pre-commit/checks/jshint_check'
 require 'pre-commit/checks/migration_check'
@@ -28,6 +29,7 @@ class PreCommit
   Checks = {
     :white_space          => WhiteSpace,
     :console_log          => ConsoleLog,
+    :ipdb                 => IpdbSetTrace,
     :js_lint_all          => JslintCheck.new(:all),
     :js_lint_new          => JslintCheck.new(:new),
     :jshint               => JshintCheck.new,
